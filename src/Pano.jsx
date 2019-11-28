@@ -13,7 +13,9 @@ function PannellumReact() {
 
 	function weather(hotSpotDiv, args) {
 		ReactDOM.render(
-			<p className='weather headsupdisplay'>Weather in 20 miles: {data[idx]["FUTURE WEATHER (MET OFFICE API)"]}</p>
+			<div className='weather headsupdisplay'> 
+			<p>Weather in 20 miles:</p>
+			<p className='weatherIcons'>  {data[idx]["FUTURE WEATHER (MET OFFICE API)"]}</p></div>
 			, hotSpotDiv);
 	}
 
