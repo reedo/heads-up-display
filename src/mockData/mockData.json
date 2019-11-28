@@ -11,7 +11,7 @@
 		"ROLL (%)": 0,
 		"FUEL LEVEL (%)": 100,
 		"HEADING (N,E,S,W)": "0 (North)",
-		"HORIZON LINE (HARD CODED)": 4.5
+		"HORIZON LINE (HARD CODED)": -4
 	},
 	{
 		"SPEED (KNTs)": 500,
@@ -25,7 +25,7 @@
 		"ROLL (%)": 0,
 		"FUEL LEVEL (%)": 100,
 		"HEADING (N,E,S,W)": "",
-		"HORIZON LINE (HARD CODED)": 4.5
+		"HORIZON LINE (HARD CODED)": -4
 	},
 	{
 		"SPEED (KNTs)": 500,
@@ -39,7 +39,7 @@
 		"ROLL (%)": 0,
 		"FUEL LEVEL (%)": 90,
 		"HEADING (N,E,S,W)": "",
-		"HORIZON LINE (HARD CODED)": 4.5
+		"HORIZON LINE (HARD CODED)": -4
 	},
 	{
 		"SPEED (KNTs)": 500,
@@ -53,7 +53,7 @@
 		"ROLL (%)": 0,
 		"FUEL LEVEL (%)": 90,
 		"HEADING (N,E,S,W)": "",
-		"HORIZON LINE (HARD CODED)": 4.5
+		"HORIZON LINE (HARD CODED)": -4
 	},
 	{
 		"SPEED (KNTs)": 500,
@@ -67,7 +67,7 @@
 		"ROLL (%)": 0,
 		"FUEL LEVEL (%)": 90,
 		"HEADING (N,E,S,W)": "",
-		"HORIZON LINE (HARD CODED)": 4.5
+		"HORIZON LINE (HARD CODED)": -4
 	},
 	{
 		"SPEED (KNTs)": 500,
@@ -81,7 +81,7 @@
 		"ROLL (%)": 0,
 		"FUEL LEVEL (%)": 90,
 		"HEADING (N,E,S,W)": "",
-		"HORIZON LINE (HARD CODED)": 4.5
+		"HORIZON LINE (HARD CODED)": -4
 	},
 	{
 		"SPEED (KNTs)": 500,
@@ -95,7 +95,7 @@
 		"ROLL (%)": 0,
 		"FUEL LEVEL (%)": 80,
 		"HEADING (N,E,S,W)": "",
-		"HORIZON LINE (HARD CODED)": 4.5
+		"HORIZON LINE (HARD CODED)": -4
 	},
 	{
 		"SPEED (KNTs)": 500,
@@ -109,7 +109,7 @@
 		"ROLL (%)": 0,
 		"FUEL LEVEL (%)": 80,
 		"HEADING (N,E,S,W)": "",
-		"HORIZON LINE (HARD CODED)": 4.5
+		"HORIZON LINE (HARD CODED)": -4
 	},
 	{
 		"SPEED (KNTs)": 500,
@@ -123,7 +123,7 @@
 		"ROLL (%)": 0,
 		"FUEL LEVEL (%)": 80,
 		"HEADING (N,E,S,W)": "",
-		"HORIZON LINE (HARD CODED)": 4.5
+		"HORIZON LINE (HARD CODED)": -4
 	},
 	{
 		"SPEED (KNTs)": 500,
@@ -137,7 +137,7 @@
 		"ROLL (%)": 0,
 		"FUEL LEVEL (%)": 80,
 		"HEADING (N,E,S,W)": "90 (East)",
-		"HORIZON LINE (HARD CODED)": 4.5
+		"HORIZON LINE (HARD CODED)": -4
 	},
 	{
 		"SPEED (KNTs)": 500,
@@ -151,7 +151,7 @@
 		"ROLL (%)": 0,
 		"FUEL LEVEL (%)": 80,
 		"HEADING (N,E,S,W)": "",
-		"HORIZON LINE (HARD CODED)": 4.5
+		"HORIZON LINE (HARD CODED)": -4
 	},
 	{
 		"SPEED (KNTs)": 500,
@@ -165,7 +165,7 @@
 		"ROLL (%)": 0,
 		"FUEL LEVEL (%)": 80,
 		"HEADING (N,E,S,W)": "",
-		"HORIZON LINE (HARD CODED)": 4.5
+		"HORIZON LINE (HARD CODED)": -4
 	},
 	{
 		"SPEED (KNTs)": 500,
@@ -179,7 +179,7 @@
 		"ROLL (%)": 0,
 		"FUEL LEVEL (%)": 70,
 		"HEADING (N,E,S,W)": "",
-		"HORIZON LINE (HARD CODED)": 4.5
+		"HORIZON LINE (HARD CODED)": -4
 	},
 	{
 		"SPEED (KNTs)": 500,
@@ -193,7 +193,7 @@
 		"ROLL (%)": 0,
 		"FUEL LEVEL (%)": 70,
 		"HEADING (N,E,S,W)": "",
-		"HORIZON LINE (HARD CODED)": 4.5
+		"HORIZON LINE (HARD CODED)": -4
 	},
 	{
 		"SPEED (KNTs)": 500,
@@ -207,7 +207,7 @@
 		"ROLL (%)": 0,
 		"FUEL LEVEL (%)": 70,
 		"HEADING (N,E,S,W)": "",
-		"HORIZON LINE (HARD CODED)": 4.5
+		"HORIZON LINE (HARD CODED)": -4
 	},
 	{
 		"SPEED (KNTs)": 500,
@@ -221,7 +221,7 @@
 		"ROLL (%)": 0,
 		"FUEL LEVEL (%)": 70,
 		"HEADING (N,E,S,W)": "",
-		"HORIZON LINE (HARD CODED)": 4.5
+		"HORIZON LINE (HARD CODED)": -4
 	},
 	{
 		"SPEED (KNTs)": 500,
@@ -235,7 +235,7 @@
 		"ROLL (%)": 0,
 		"FUEL LEVEL (%)": 70,
 		"HEADING (N,E,S,W)": "",
-		"HORIZON LINE (HARD CODED)": 4.5
+		"HORIZON LINE (HARD CODED)": -4
 	},
 	{
 		"SPEED (KNTs)": 500,
@@ -249,7 +249,7 @@
 		"ROLL (%)": 0,
 		"FUEL LEVEL (%)": 70,
 		"HEADING (N,E,S,W)": "",
-		"HORIZON LINE (HARD CODED)": 4.5
+		"HORIZON LINE (HARD CODED)": -4
 	},
 	{
 		"SPEED (KNTs)": 500,
@@ -263,7 +263,7 @@
 		"ROLL (%)": 0,
 		"FUEL LEVEL (%)": 70,
 		"HEADING (N,E,S,W)": "",
-		"HORIZON LINE (HARD CODED)": 4.5
+		"HORIZON LINE (HARD CODED)": -4
 	},
 	{
 		"SPEED (KNTs)": 500,
@@ -277,7 +277,7 @@
 		"ROLL (%)": 0,
 		"FUEL LEVEL (%)": 70,
 		"HEADING (N,E,S,W)": "180(South)",
-		"HORIZON LINE (HARD CODED)": 4.5
+		"HORIZON LINE (HARD CODED)": -4
 	},
 	{
 		"SPEED (KNTs)": 500,
@@ -291,7 +291,7 @@
 		"ROLL (%)": 0,
 		"FUEL LEVEL (%)": 70,
 		"HEADING (N,E,S,W)": "",
-		"HORIZON LINE (HARD CODED)": 4.5
+		"HORIZON LINE (HARD CODED)": -4
 	},
 	{
 		"SPEED (KNTs)": 500,
@@ -305,7 +305,7 @@
 		"ROLL (%)": 0,
 		"FUEL LEVEL (%)": 70,
 		"HEADING (N,E,S,W)": "",
-		"HORIZON LINE (HARD CODED)": 4.5
+		"HORIZON LINE (HARD CODED)": -4
 	},
 	{
 		"SPEED (KNTs)": 500,
@@ -319,7 +319,7 @@
 		"ROLL (%)": 0,
 		"FUEL LEVEL (%)": 70,
 		"HEADING (N,E,S,W)": "",
-		"HORIZON LINE (HARD CODED)": 4.5
+		"HORIZON LINE (HARD CODED)": -4
 	},
 	{
 		"SPEED (KNTs)": 500,
@@ -333,7 +333,7 @@
 		"ROLL (%)": 0,
 		"FUEL LEVEL (%)": 70,
 		"HEADING (N,E,S,W)": "",
-		"HORIZON LINE (HARD CODED)": 4.5
+		"HORIZON LINE (HARD CODED)": -4
 	},
 	{
 		"SPEED (KNTs)": 500,
@@ -347,7 +347,7 @@
 		"ROLL (%)": 0,
 		"FUEL LEVEL (%)": 70,
 		"HEADING (N,E,S,W)": "",
-		"HORIZON LINE (HARD CODED)": 4.5
+		"HORIZON LINE (HARD CODED)": -4
 	},
 	{
 		"SPEED (KNTs)": 500,
@@ -361,7 +361,7 @@
 		"ROLL (%)": 0,
 		"FUEL LEVEL (%)": 70,
 		"HEADING (N,E,S,W)": "",
-		"HORIZON LINE (HARD CODED)": 4.5
+		"HORIZON LINE (HARD CODED)": -4
 	},
 	{
 		"SPEED (KNTs)": 500,
@@ -375,7 +375,7 @@
 		"ROLL (%)": 0,
 		"FUEL LEVEL (%)": 70,
 		"HEADING (N,E,S,W)": "",
-		"HORIZON LINE (HARD CODED)": 4.5
+		"HORIZON LINE (HARD CODED)": -4
 	},
 	{
 		"SPEED (KNTs)": 500,
@@ -389,7 +389,7 @@
 		"ROLL (%)": 0,
 		"FUEL LEVEL (%)": 70,
 		"HEADING (N,E,S,W)": "",
-		"HORIZON LINE (HARD CODED)": 4.5
+		"HORIZON LINE (HARD CODED)": -4
 	},
 	{
 		"SPEED (KNTs)": 500,
@@ -403,7 +403,7 @@
 		"ROLL (%)": 0,
 		"FUEL LEVEL (%)": 70,
 		"HEADING (N,E,S,W)": "",
-		"HORIZON LINE (HARD CODED)": 4.5
+		"HORIZON LINE (HARD CODED)": -4
 	},
 	{
 		"SPEED (KNTs)": 500,
@@ -417,6 +417,6 @@
 		"ROLL (%)": 0,
 		"FUEL LEVEL (%)": 70,
 		"HEADING (N,E,S,W)": "270(West)",
-		"HORIZON LINE (HARD CODED)": 4.5
+		"HORIZON LINE (HARD CODED)": -4
 	}
 ]

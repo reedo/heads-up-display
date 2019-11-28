@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
 import { Pannellum } from "pannellum-react";
-import myImage from "./img/test1.png";
+import myImage from "./img/Cockpit.jpg";
 import './Pano.css'
 function PannellumReact() {
 
@@ -59,7 +59,7 @@ function PannellumReact() {
 				width="100vw"
 				height="100vh"
 				image={myImage}
-				pitch={0}
+				pitch={-5}
 				yaw={0}
 				hfov={100}
 				maxHfov={100}
@@ -73,42 +73,42 @@ function PannellumReact() {
 					type='custom'
 					cssClass='horizonLine'
 					pitch={data[idx]["HORIZON LINE (HARD CODED)"]}
-					yaw={-4.5}
+					yaw={1.2}
 					tooltip={horizonLine}
 				/>
 				<Pannellum.Hotspot
 					type='custom'
 					cssClass='weather'
-					pitch={-3}
-					yaw={50}
+					pitch={4}
+					yaw={40}
 					tooltip={weather}
 				/>
 				<Pannellum.Hotspot
 					type='custom'
 					cssClass='flightSpeed'
-					pitch={0}
-					yaw={40}
+					pitch={-6}
+					yaw={39}
 					tooltip={flightSpeed}
 				/>
 				<Pannellum.Hotspot
 					type='custom'
 					cssClass='fuelLevel'
-					pitch={-2}
-					yaw={-48}
+					pitch={-5}
+					yaw={-42}
 					tooltip={fuelLevel}
 				/>
 				<Pannellum.Hotspot
 					type='custom'
 					cssClass='rightPanel'
-					pitch={4}
-					yaw={95}
+					pitch={-3}
+					yaw={77}
 					tooltip={rightPanel}
 				/>
 				<Pannellum.Hotspot
 					type='custom'
 					cssClass='leftPanel'
-					pitch={11}
-					yaw={-105}
+					pitch={-5}
+					yaw={-74}
 					tooltip={leftPanel}
 				/>
 			</Pannellum>
