@@ -10,9 +10,9 @@ const PannellumReact = () => (
 			width="100vw"
 			height="100vh"
 			image={myImage}
-			pitch={10}
-			yaw={180}
-			hfov={110}
+			pitch={0}
+			yaw={0}
+			hfov={120}
 			autoLoad
 			onLoad={() => {
 				console.log("panorama loaded");
