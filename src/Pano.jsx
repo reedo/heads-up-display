@@ -11,31 +11,42 @@ function PannellumReact() {
 
 	function weather(hotSpotDiv, args) {
 		ReactDOM.render(
-			<h1>WEATHER</h1>
+			<p class='weather headsupdisplay'>Weather in 20 miles: WET</p>
 			, hotSpotDiv);
 	}
 
 	function flightSpeed(hotSpotDiv, args) {
 		ReactDOM.render(
-			<h1>FLIGHT SPEED</h1>
+			<p class='flightSpeed headsupdisplay'>Flight Speed: 600 km/h</p>
 			, hotSpotDiv);
 	}
 
 	function fuelLevel(hotSpotDiv, args) {
 		ReactDOM.render(
-			<h1>FUEL LEVEL</h1>
+			<div class="fuelLevel headsupdisplay">
+				<p>Fuel Level: 50%</p>
+				<p>Fuel Burn: 10 kg/min</p>
+			</div>
 			, hotSpotDiv);
 	}
 
 	function rightPanel(hotSpotDiv, args) {
 		ReactDOM.render(
-			<h1>RIGHT</h1>
+			<div class="rightPanel headsupdisplay">
+				<p>Emergency Handbook:</p>
+				<p>What is Lorem Ipsum?</p>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+			</div >
 			, hotSpotDiv);
 	}
 
 	function leftPanel(hotSpotDiv, args) {
 		ReactDOM.render(
-			<h1>LEFT</h1>
+			<div class='leftPanel headsupdisplay'>
+				<p>V<sub>1</sub>: 25,030 km/h</p>
+				<p>Nearest Aerodrome: Auckland Airport</p>
+				<p>Minimum Safe Altitude: 60,000 ft</p>
+			</div>
 			, hotSpotDiv);
 	}
 
@@ -80,21 +91,21 @@ function PannellumReact() {
 					type='custom'
 					cssClass='fuelLevel'
 					pitch={-2}
-					yaw={-40}
+					yaw={-48}
 					tooltip={fuelLevel}
 				/>
 				<Pannellum.Hotspot
 					type='custom'
 					cssClass='rightPanel'
 					pitch={4}
-					yaw={100}
+					yaw={95}
 					tooltip={rightPanel}
 				/>
 				<Pannellum.Hotspot
 					type='custom'
 					cssClass='leftPanel'
-					pitch={4}
-					yaw={-100}
+					pitch={11}
+					yaw={-105}
 					tooltip={leftPanel}
 				/>
 			</Pannellum>

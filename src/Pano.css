@@ -3,3 +3,25 @@
 	width: 400px;
 	background: rgb(19, 202, 89);
 }
+.headsupdisplay {
+	color: greenyellow
+}
+.horizonLine {
+	size:456px
+}
+.weather {
+
+}
+.flightSpeed {
+
+}
+.fuelLevel {
+	color:orange
+}
+.rightPanel {
+	color:orange;
+	width: 400px;
+}
+.leftPanel {
+	color:orange
+}
