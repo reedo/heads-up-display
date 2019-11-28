@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom'
 import { Pannellum } from "pannellum-react";
-import myImage from "./img/Cockpit.jpg";
+import './Pano.css'
+import myImage from "./img/CockpitWithSky.jpg";
 import annyang from './annyang/Annyang'
 function PannellumReact() {
 
@@ -27,9 +28,9 @@ function PannellumReact() {
 
 	function weather(hotSpotDiv, args) {
 		ReactDOM.render(
-			<div className='weather headsupdisplay'> 
-			<p>Weather in 20 miles:</p>
-			<p className='weatherIcons'>  {data[idx]["FUTURE WEATHER (MET OFFICE API)"]}</p></div>
+			<div className='weather headsupdisplay'>
+				<p>Weather in 20 miles:</p>
+				<p className='weatherIcons'>  {data[timer]["FUTURE WEATHER (MET OFFICE API)"]}</p></div>
 			, hotSpotDiv);
 	}
 
