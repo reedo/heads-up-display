@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom'
 import { Pannellum } from "pannellum-react";
 import myImage from "./img/test1.png";
 import './Pano.css'
@@ -9,25 +10,34 @@ function PannellumReact() {
 
 
 	function weather(hotSpotDiv, args) {
-		hotSpotDiv.classList.add('custom-tooltip');
-		var span = document.createElement('span');
-		span.innerHTML = '<div><p stylecolor="orange">WEATHER</p></div>';
-		hotSpotDiv.appendChild(span);
-		span.style.width = span.scrollWidth - 20 + 'px';
-		span.style.marginLeft = -(span.scrollWidth - hotSpotDiv.offsetWidth) / 2 + 'px';
-		span.style.marginTop = -span.scrollHeight - 12 + 'px';
+		ReactDOM.render(
+			<h1>WEATHER</h1>
+			, hotSpotDiv);
 	}
 
 	function flightSpeed(hotSpotDiv, args) {
-		hotSpotDiv.classList.add('custom-tooltip');
-		var span = document.createElement('span');
-		span.innerHTML = '<div><p stylecolor="orange">FLIGHT SPEED</p></div>';
-		hotSpotDiv.appendChild(span);
-		span.style.width = span.scrollWidth - 20 + 'px';
-		span.style.marginLeft = -(span.scrollWidth - hotSpotDiv.offsetWidth) / 2 + 'px';
-		span.style.marginTop = -span.scrollHeight - 12 + 'px';
+		ReactDOM.render(
+			<h1>FLIGHT SPEED</h1>
+			, hotSpotDiv);
 	}
 
+	function fuelLevel(hotSpotDiv, args) {
+		ReactDOM.render(
+			<h1>FUEL LEVEL</h1>
+			, hotSpotDiv);
+	}
+
+	function rightPanel(hotSpotDiv, args) {
+		ReactDOM.render(
+			<h1>RIGHT</h1>
+			, hotSpotDiv);
+	}
+
+	function leftPanel(hotSpotDiv, args) {
+		ReactDOM.render(
+			<h1>LEFT</h1>
+			, hotSpotDiv);
+	}
 
 	return (
 		<div>
@@ -49,22 +59,43 @@ function PannellumReact() {
 					type='custom'
 					cssClass='horizonLine'
 					pitch={4.5}
-					yaw={-16}
+					yaw={-4.5}
 					tooltip={horizonLine}
 				/>
 				<Pannellum.Hotspot
 					type='custom'
 					cssClass='weather'
-					pitch={4.5}
-					yaw={-16}
+					pitch={-3}
+					yaw={50}
 					tooltip={weather}
 				/>
 				<Pannellum.Hotspot
 					type='custom'
 					cssClass='flightSpeed'
-					pitch={4.5}
-					yaw={-16}
+					pitch={0}
+					yaw={40}
 					tooltip={flightSpeed}
+				/>
+				<Pannellum.Hotspot
+					type='custom'
+					cssClass='fuelLevel'
+					pitch={-2}
+					yaw={-40}
+					tooltip={fuelLevel}
+				/>
+				<Pannellum.Hotspot
+					type='custom'
+					cssClass='rightPanel'
+					pitch={4}
+					yaw={100}
+					tooltip={rightPanel}
+				/>
+				<Pannellum.Hotspot
+					type='custom'
+					cssClass='leftPanel'
+					pitch={4}
+					yaw={-100}
+					tooltip={leftPanel}
 				/>
 			</Pannellum>
 		</div>
