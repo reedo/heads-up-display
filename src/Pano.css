@@ -1,11 +1,15 @@
-.horizonLine {
+*{
+	margin:0;
+	padding:0;
+}.horizonLine {
 	height: 4px;
-	width: 370px;
+	width: 350px;
 	background: rgb(19, 202, 89);
 }
 .headsupdisplay {
 	color: greenyellow;
 	background: rgba(77, 57, 74, 0.5);
+	padding: 5px;
 }
 .horizonLine {
 	size:456px
@@ -14,7 +18,7 @@
 	text-align: right;
 }
 .weatherIcons {
-	font-size:40px;
+	font-size:30px;
 	text-align: right;
 }
 .flightSpeed {
