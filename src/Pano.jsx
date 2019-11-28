@@ -1,31 +1,33 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom'
 import { Pannellum } from "pannellum-react";
 import myImage from "./img/test1.png";
 import './Pano.css'
 function PannellumReact() {
 
+	const data = require('./mockData/mockData.json');
+	let idx = 0;
+
 	function horizonLine(hotSpotDiv, args) {
 	}
 
-
 	function weather(hotSpotDiv, args) {
 		ReactDOM.render(
-			<p class='weather headsupdisplay'>Weather in 20 miles: WET</p>
+			<p className='weather headsupdisplay'>Weather in 20 miles: {data[idx]["FUTURE WEATHER (MET OFFICE API)"]}</p>
 			, hotSpotDiv);
 	}
 
 	function flightSpeed(hotSpotDiv, args) {
-    const flightSpeedData = require('./mockData/mockData.json');
+		// const flightSpeedData = require();
 		ReactDOM.render(
-			<p class='flightSpeed headsupdisplay'>Flight Speed: 600 km/h</p>
+			<p className='flightSpeed headsupdisplay'>Flight Speed: {data[idx]["SPEED (KNTs)"]} km/h</p>
 			, hotSpotDiv);
 	}
 
 	function fuelLevel(hotSpotDiv, args) {
 		ReactDOM.render(
-			<div class="fuelLevel headsupdisplay">
-				<p>Fuel Level: 50%</p>
+			<div className="fuelLevel headsupdisplay">
+				<p>Fuel Level: {data[idx]["FUEL LEVEL (%)"]}%</p>
 				<p>Fuel Burn: 10 kg/min</p>
 			</div>
 			, hotSpotDiv);
@@ -33,20 +35,20 @@ function PannellumReact() {
 
 	function rightPanel(hotSpotDiv, args) {
 		ReactDOM.render(
-			<div class="rightPanel headsupdisplay">
+			<div className="rightPanel headsupdisplay">
 				<p>Emergency Handbook:</p>
-				<p>What is Lorem Ipsum?</p>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+				<p>{data[idx]["QUICK REFERENCE GUIDE"]}</p>
 			</div >
 			, hotSpotDiv);
 	}
 
 	function leftPanel(hotSpotDiv, args) {
 		ReactDOM.render(
-			<div class='leftPanel headsupdisplay'>
+			<div className='leftPanel headsupdisplay'>
 				<p>V<sub>1</sub>: 25,030 km/h</p>
-				<p>Nearest Aerodrome: Auckland Airport</p>
-				<p>Minimum Safe Altitude: 60,000 ft</p>
+				<p>Nearest Aerodrome: {data[idx]["NEAREST AERODROME"]}</p>
+				<p>Minimum Safe Altitude: {data[idx]["MSA (Ft)"]} ft</p>
+				<p>Airspace Limit: {data[idx]["AIRSPACE LIMIT"]} ft</p>
 			</div>
 			, hotSpotDiv);
 	}
@@ -70,7 +72,7 @@ function PannellumReact() {
 				<Pannellum.Hotspot
 					type='custom'
 					cssClass='horizonLine'
-					pitch={4.5}
+					pitch={data[idx]["HORIZON LINE (HARD CODED)"]}
 					yaw={-4.5}
 					tooltip={horizonLine}
 				/>
