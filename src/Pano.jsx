@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { render } from 'react-dom';
-
 import { Pannellum } from "pannellum-react";
 import myImage from "./img/test1.png";
+import './Pano.css'
 
 const PannellumReact = () => (
 	<div>
@@ -12,26 +11,17 @@ const PannellumReact = () => (
 			image={myImage}
 			pitch={0}
 			yaw={0}
-			hfov={120}
+			hfov={80}
 			autoLoad
 			onLoad={() => {
 				console.log("panorama loaded");
 			}}
 		>
 			<Pannellum.Hotspot
-				type="info"
-				pitch={11}
-				yaw={-167}
-				text="Info Hotspot Text 3"
-				URL="https://github.com/farminf/pannellum-react"
-			/>
-
-			<Pannellum.Hotspot
-				type="info"
-				pitch={31}
-				yaw={-107}
-				text="Info Hotspot Text 4"
-				URL="https://github.com/farminf/pannellum-react"
+				type='custom'
+				cssClass='horizon-line'
+				pitch={4.5}
+				yaw={-4}
 			/>
 		</Pannellum>
 	</div>
