@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom'
 import { Pannellum } from "pannellum-react";
 import myImage from "./img/Cockpit.jpg";
-import './Pano.css'
+import annyang from './annyang/Annyang'
 function PannellumReact() {
 
 	const data = require('./mockData/mockData.json');
@@ -81,6 +81,8 @@ function PannellumReact() {
 				autoLoad
 				onLoad={() => {
 					console.log("panorama loaded");
+					console.log(annyang);
+
 				}}
 			>
 				<Pannellum.Hotspot
