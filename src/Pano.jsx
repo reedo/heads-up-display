@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Pannellum } from "pannellum-react";
 import myImage from "./img/test1.png";
 import './Pano.css'
+
 function PannellumReact() {
 
 	function horizonLine(hotSpotDiv, args) {
@@ -19,13 +20,15 @@ function PannellumReact() {
 	}
 
 	function flightSpeed(hotSpotDiv, args) {
+
+		const flightSpeedData = require('./mockData/mockData.json');
 		hotSpotDiv.classList.add('custom-tooltip');
 		var span = document.createElement('span');
 		span.innerHTML = '<div><p stylecolor="orange">FLIGHT SPEED</p></div>';
-		hotSpotDiv.appendChild(span);
 		span.style.width = span.scrollWidth - 20 + 'px';
 		span.style.marginLeft = -(span.scrollWidth - hotSpotDiv.offsetWidth) / 2 + 'px';
 		span.style.marginTop = -span.scrollHeight - 12 + 'px';
+		hotSpotDiv.appendChild(span);
 	}
 
 
