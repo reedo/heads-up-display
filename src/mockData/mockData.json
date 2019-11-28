@@ -126,7 +126,7 @@
 		"HORIZON LINE (HARD CODED)": -4
 	},
 	{
-		"SPEED (KNTs)": 500,
+		"SPEED (KNTs)": 480,
 		"MSA (Ft)": 1000,
 		"AIRSPACE LIMIT": "18008 MLS (MIN)",
 		"V SPEED": 32395,
@@ -140,7 +140,7 @@
 		"HORIZON LINE (HARD CODED)": -4
 	},
 	{
-		"SPEED (KNTs)": 500,
+		"SPEED (KNTs)": 490,
 		"MSA (Ft)": 1000,
 		"AIRSPACE LIMIT": "18009 MLS (MIN)",
 		"V SPEED": 32395,

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-function LeftPanel(props) {
+function Weather(props) {
 	const data = props.data;
 
 	const [timer, setTimer] = useState(0);
@@ -19,13 +19,10 @@ function LeftPanel(props) {
 	}, [timer]);
 
 	return (
-		<div className='leftPanel headsupdisplay'>
-			<p>V<sub>1</sub>: 25,030 km/h</p>
-			<p>Nearest Aerodrome: {data[timer]["NEAREST AERODROME"]}</p>
-			<p>Minimum Safe Altitude: {data[timer]["MSA (Ft)"]} ft</p>
-			<p>Airspace Limit: {data[timer]["AIRSPACE LIMIT"]} ft</p>
-		</div>
+		<div className='weather headsupdisplay'>
+			<p>Weather in 20 miles:</p>
+			<p className='weatherIcons'>  {data[timer]["FUTURE WEATHER (MET OFFICE API)"]}</p></div>
 	);
 }
 
-export default LeftPanel;
+export default Weather;

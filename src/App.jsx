@@ -2,55 +2,54 @@ import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import './Pano.css';
 import { Pannellum } from "pannellum-react";
-import './Pano.css'
 import myImage from "./img/CockpitWithSky.jpg";
 import annyang from './annyang/Annyang'
+import Weather from './components/Weather';
+import FlightSpeed from './components/FlightSpeed';
+import FuelLevel from './components/FuelLevel';
 import LeftPanel from './components/LeftPanel';
+import RightPanel from './components/RightPanel';
 
 function PannellumReact() {
 
 	const data = require('./mockData/mockData.json');
 
+	const [timer, setTimer] = useState(0);
 
+	useEffect(() => {
+		let interval = null;
+		interval = setInterval(() => {
+			if (timer < 29) {
+				setTimer(timer => timer + 1);
+			} else {
+				setTimer(0);
+			}
+		}, 1000);
+		console.log("Timer = " + timer);
+		return () => clearInterval(interval);
+	}, [timer]);
 
 	function horizonLine(hotSpotDiv, args) {
 	}
 
 	function weather(hotSpotDiv, args) {
-		ReactDOM.render(
-			<div className='weather headsupdisplay'>
-				<p>Weather in 20 miles:</p>
-				<p className='weatherIcons'>  {data[timer]["FUTURE WEATHER (MET OFFICE API)"]}</p></div>
-			, hotSpotDiv);
+		ReactDOM.render(<Weather data={args[0]} />, hotSpotDiv);
 	}
 
 	function flightSpeed(hotSpotDiv, args) {
-		ReactDOM.render(
-			<p className='flightSpeed headsupdisplay'>Flight Speed: {data[timer]["SPEED (KNTs)"]} km/h</p>
-			, hotSpotDiv);
+		ReactDOM.render(<FlightSpeed data={args[0]} />, hotSpotDiv);
 	}
 
 	function fuelLevel(hotSpotDiv, args) {
-		ReactDOM.render(
-			<div className="fuelLevel headsupdisplay">
-				<p>Fuel Level: {data[timer]["FUEL LEVEL (%)"]}%</p>
-				<p>Fuel Burn: 10 kg/min</p>
-			</div>
-			, hotSpotDiv);
-	}
-
-	function rightPanel(hotSpotDiv, args) {
-		ReactDOM.render(
-			<div className="rightPanel headsupdisplay">
-				<p>Emergency Handbook:</p>
-				<p>{data[timer]["QUICK REFERENCE GUIDE"]}</p>
-			</div >
-			, hotSpotDiv);
+		ReactDOM.render(<FuelLevel data={args[0]} />, hotSpotDiv);
 	}
 
 	function leftPanel(hotSpotDiv, args) {
-		console.log("leftPanel re-rendered");
 		ReactDOM.render(<LeftPanel data={args[0]} />, hotSpotDiv);
+	}
+
+	function rightPanel(hotSpotDiv, args) {
+		ReactDOM.render(<RightPanel data={args[0]} />, hotSpotDiv);
 	}
 
 	return (
@@ -83,6 +82,7 @@ function PannellumReact() {
 					pitch={2}
 					yaw={40}
 					tooltip={weather}
+					tooltipArg={[data]}
 				/>
 				<Pannellum.Hotspot
 					type='custom'
@@ -90,6 +90,7 @@ function PannellumReact() {
 					pitch={-6}
 					yaw={39}
 					tooltip={flightSpeed}
+					tooltipArg={[data]}
 				/>
 				<Pannellum.Hotspot
 					type='custom'
@@ -97,6 +98,7 @@ function PannellumReact() {
 					pitch={-5}
 					yaw={-42}
 					tooltip={fuelLevel}
+					tooltipArg={[data]}
 				/>
 				<Pannellum.Hotspot
 					type='custom'
@@ -104,6 +106,7 @@ function PannellumReact() {
 					pitch={-3}
 					yaw={77}
 					tooltip={rightPanel}
+					tooltipArg={[data]}
 				/>
 				<Pannellum.Hotspot
 					type='custom'
