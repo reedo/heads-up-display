@@ -23,11 +23,11 @@ class Annyang {
     }
   }
 
-  addCommands(reset, change, undo) {
+  addCommands(showHud, hideHud, undo) {
     if (annyang) {
       annyang.addCommands({
-        'reset': () => reset(),
-        'change': () => change(),
+        'show': () => showHud(),
+        'hide': () => hideHud(),
         'undo': () => undo()
       })
     }
@@ -35,13 +35,13 @@ class Annyang {
 
   addCallback(engineCallback, resultCallback) {
     if (annyang) {
-      annyang.addCallback('start', engineCallback('on'))
-      annyang.addCallback('soundstart', event => engineCallback('listening'))
-      annyang.addCallback('end', event => engineCallback('off'))
-      annyang.addCallback('error', event => engineCallback(event.error))
-      annyang.addCallback('errorNetwork', event => engineCallback('network error'))
-      annyang.addCallback('errorPermissionBlocked', event => engineCallback('permission blocked'))
-      annyang.addCallback('errorPermissionDenied', event => engineCallback('permission denied'))
+      // annyang.addCallback('start', engineCallback('on'))
+      // annyang.addCallback('soundstart', event => engineCallback('listening'))
+      // annyang.addCallback('end', event => engineCallback('off'))
+      // annyang.addCallback('error', event => engineCallback(event.error))
+      // annyang.addCallback('errorNetwork', event => engineCallback('network error'))
+      // annyang.addCallback('errorPermissionBlocked', event => engineCallback('permission blocked'))
+      // annyang.addCallback('errorPermissionDenied', event => engineCallback('permission denied'))
       annyang.addCallback('result', event => resultCallback(event))
     }
   }

@@ -14,7 +14,6 @@ function RightPanel(props) {
 				setTimer(0);
 			}
 		}, 1000);
-		console.log("Timer = " + timer);
 		return () => clearInterval(interval);
 	}, [timer]);
 
