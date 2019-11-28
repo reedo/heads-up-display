@@ -113,6 +113,7 @@ function PannellumReact() {
 				/>
 			</Pannellum>
 		</div>
+
 	)
 };
 
