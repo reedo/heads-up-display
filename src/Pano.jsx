@@ -6,10 +6,9 @@ import myImage from "./img/test1.png";
 
 const PannellumReact = () => (
 	<div>
-		<h1>Pannellum React Component</h1>
 		<Pannellum
-			width="100%"
-			height="500px"
+			width="100vw"
+			height="100vh"
 			image={myImage}
 			pitch={10}
 			yaw={180}
