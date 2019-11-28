@@ -11,7 +11,9 @@ const PannellumReact = () => (
 			image={myImage}
 			pitch={0}
 			yaw={0}
-			hfov={80}
+			hfov={100}
+			maxHfov={100}
+			minHfov={100}
 			autoLoad
 			onLoad={() => {
 				console.log("panorama loaded");
