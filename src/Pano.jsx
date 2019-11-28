@@ -4,24 +4,13 @@ import { Pannellum } from "pannellum-react";
 import './Pano.css'
 import myImage from "./img/CockpitWithSky.jpg";
 import annyang from './annyang/Annyang'
+import LeftPanel from './components/LeftPanel';
+
 function PannellumReact() {
 
 	const data = require('./mockData/mockData.json');
 
-	const [timer, setTimer] = useState(0);
 
-	useEffect(() => {
-		let interval = null;
-		interval = setInterval(() => {
-			if (timer < 29) {
-				setTimer(timer => timer + 1);
-			} else {
-				setTimer(0);
-			}
-		}, 1000);
-		console.log("Timer = " + timer);
-		return () => clearInterval(interval);
-	}, [timer]);
 
 	function horizonLine(hotSpotDiv, args) {
 	}
@@ -35,7 +24,6 @@ function PannellumReact() {
 	}
 
 	function flightSpeed(hotSpotDiv, args) {
-		// const flightSpeedData = require();
 		ReactDOM.render(
 			<p className='flightSpeed headsupdisplay'>Flight Speed: {data[timer]["SPEED (KNTs)"]} km/h</p>
 			, hotSpotDiv);
@@ -60,14 +48,8 @@ function PannellumReact() {
 	}
 
 	function leftPanel(hotSpotDiv, args) {
-		ReactDOM.render(
-			<div className='leftPanel headsupdisplay'>
-				<p>V<sub>1</sub>: 25,030 km/h</p>
-				<p>Nearest Aerodrome: {data[timer]["NEAREST AERODROME"]}</p>
-				<p>Minimum Safe Altitude: {data[timer]["MSA (Ft)"]} ft</p>
-				<p>Airspace Limit: {data[timer]["AIRSPACE LIMIT"]} ft</p>
-			</div>
-			, hotSpotDiv);
+		console.log("leftPanel re-rendered");
+		ReactDOM.render(<LeftPanel data={args[0]} />, hotSpotDiv);
 	}
 
 	return (
@@ -85,7 +67,6 @@ function PannellumReact() {
 				onLoad={() => {
 					console.log("panorama loaded");
 					console.log(annyang);
-
 				}}
 			>
 				<Pannellum.Hotspot
@@ -129,6 +110,7 @@ function PannellumReact() {
 					pitch={-5}
 					yaw={-74}
 					tooltip={leftPanel}
+					tooltipArg={[data]}
 				/>
 			</Pannellum>
 		</div>
