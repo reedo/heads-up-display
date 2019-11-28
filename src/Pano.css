@@ -4,7 +4,8 @@
 	background: rgb(19, 202, 89);
 }
 .headsupdisplay {
-	color: greenyellow
+	color: greenyellow;
+	background: rgba(77, 57, 74, 0.5);
 }
 .horizonLine {
 	size:456px
