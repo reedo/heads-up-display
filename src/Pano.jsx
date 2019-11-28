@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom';
+import './Pano.css';
 import { Pannellum } from "pannellum-react";
 import './Pano.css'
 import myImage from "./img/CockpitWithSky.jpg";
@@ -79,7 +80,7 @@ function PannellumReact() {
 				<Pannellum.Hotspot
 					type='custom'
 					cssClass='weather'
-					pitch={4}
+					pitch={2}
 					yaw={40}
 					tooltip={weather}
 				/>
