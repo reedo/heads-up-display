@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "annyang": "^2.6.1",
     "csv-parse": "^4.8.2",
     "csvtojson": "^2.0.10",
     "fs": "0.0.1-security",

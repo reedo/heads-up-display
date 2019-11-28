@@ -1,12 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom'
 import { Pannellum } from "pannellum-react";
 import myImage from "./img/Cockpit.jpg";
-import './Pano.css'
+import annyang from './annyang/Annyang'
 function PannellumReact() {
 
 	const data = require('./mockData/mockData.json');
-	let idx = 0;
+
+	const [timer, setTimer] = useState(0);
+
+	useEffect(() => {
+		let interval = null;
+		interval = setInterval(() => {
+			if (timer < 29) {
+				setTimer(timer => timer + 1);
+			} else {
+				setTimer(0);
+			}
+		}, 1000);
+		console.log("Timer = " + timer);
+		return () => clearInterval(interval);
+	}, [timer]);
 
 	function horizonLine(hotSpotDiv, args) {
 	}
@@ -22,14 +36,14 @@ function PannellumReact() {
 	function flightSpeed(hotSpotDiv, args) {
 		// const flightSpeedData = require();
 		ReactDOM.render(
-			<p className='flightSpeed headsupdisplay'>Flight Speed: {data[idx]["SPEED (KNTs)"]} km/h</p>
+			<p className='flightSpeed headsupdisplay'>Flight Speed: {data[timer]["SPEED (KNTs)"]} km/h</p>
 			, hotSpotDiv);
 	}
 
 	function fuelLevel(hotSpotDiv, args) {
 		ReactDOM.render(
 			<div className="fuelLevel headsupdisplay">
-				<p>Fuel Level: {data[idx]["FUEL LEVEL (%)"]}%</p>
+				<p>Fuel Level: {data[timer]["FUEL LEVEL (%)"]}%</p>
 				<p>Fuel Burn: 10 kg/min</p>
 			</div>
 			, hotSpotDiv);
@@ -39,7 +53,7 @@ function PannellumReact() {
 		ReactDOM.render(
 			<div className="rightPanel headsupdisplay">
 				<p>Emergency Handbook:</p>
-				<p>{data[idx]["QUICK REFERENCE GUIDE"]}</p>
+				<p>{data[timer]["QUICK REFERENCE GUIDE"]}</p>
 			</div >
 			, hotSpotDiv);
 	}
@@ -48,9 +62,9 @@ function PannellumReact() {
 		ReactDOM.render(
 			<div className='leftPanel headsupdisplay'>
 				<p>V<sub>1</sub>: 25,030 km/h</p>
-				<p>Nearest Aerodrome: {data[idx]["NEAREST AERODROME"]}</p>
-				<p>Minimum Safe Altitude: {data[idx]["MSA (Ft)"]} ft</p>
-				<p>Airspace Limit: {data[idx]["AIRSPACE LIMIT"]} ft</p>
+				<p>Nearest Aerodrome: {data[timer]["NEAREST AERODROME"]}</p>
+				<p>Minimum Safe Altitude: {data[timer]["MSA (Ft)"]} ft</p>
+				<p>Airspace Limit: {data[timer]["AIRSPACE LIMIT"]} ft</p>
 			</div>
 			, hotSpotDiv);
 	}
@@ -69,12 +83,14 @@ function PannellumReact() {
 				autoLoad
 				onLoad={() => {
 					console.log("panorama loaded");
+					console.log(annyang);
+
 				}}
 			>
 				<Pannellum.Hotspot
 					type='custom'
 					cssClass='horizonLine'
-					pitch={data[idx]["HORIZON LINE (HARD CODED)"]}
+					pitch={data[timer]["HORIZON LINE (HARD CODED)"]}
 					yaw={1.2}
 					tooltip={horizonLine}
 				/>
