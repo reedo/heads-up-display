@@ -28,8 +28,8 @@ class Annyang {
       annyang.addCommands({
         'show': () => showHud(),
         'hide': () => hideHud(),
-        'create report': () => createReport(),
-        'augmented Reality': ()=>augmentedReality()
+        'report': () => createReport(),
+        'switch': ()=>augmentedReality()
       })
     }
   }
