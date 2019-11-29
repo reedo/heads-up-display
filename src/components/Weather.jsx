@@ -13,7 +13,7 @@ function Weather(props) {
 			} else {
 				setTimer(0);
 			}
-		}, 1000);
+		}, 5000);
 		return () => clearInterval(interval);
 	}, [timer]);
 

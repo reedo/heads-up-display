@@ -23,18 +23,11 @@ function HeadsUp(props) {
   useEffect(() => {
     let interval = null;
     interval = setInterval(() => {
-      if (timer < 29) {
-        setTimer(timer => timer + 1);
-      } else {
-        setTimer(0);
-      }
+      setTimer(timer => timer + 1);
     }, 1000);
     console.log("Timer = " + timer);
     return () => clearInterval(interval);
   }, [timer]);
-
-  function horizonLine(hotSpotDiv, args) {
-  }
 
   function weather(hotSpotDiv, args) {
     ReactDOM.render(
@@ -93,7 +86,6 @@ function HeadsUp(props) {
   }
 
   const resultCallback = (userSaid, commandText, phrases) => {
-    //setShowHud(userSaid);
     console.log("USER SAID" + userSaid);
     console.log(" COMMAND TEXT " + commandText);
     console.log("PHASES " + phrases);
@@ -162,26 +154,18 @@ function HeadsUp(props) {
             {/*  yaw={-74}*/}
             {/*  tooltip={leftPanel}*/}
             {/*/>*/}
-
-            <Pannellum.Hotspot
-              type='custom'
-              cssClass='horizonLine'
-              pitch={data[timer]["HORIZON LINE (HARD CODED)"]}
-              yaw={1.2}
-              tooltip={horizonLine}
-            />
             <Pannellum.Hotspot
               type='custom'
               cssClass='weather'
-              pitch={2}
-              yaw={40}
+              pitch={4}
+              yaw={42}
               tooltip={weather}
               tooltipArg={[data]}
             />
             <Pannellum.Hotspot
               type='custom'
               cssClass='flightSpeed'
-              pitch={-6}
+              pitch={-4}
               yaw={39}
               tooltip={flightSpeed}
               tooltipArg={[data]}
