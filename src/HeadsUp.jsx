@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useKeyPress } from 'react';
 import ReactDOM from 'react-dom';
 import './Pano.css';
 import { Pannellum } from "pannellum-react";
@@ -20,6 +20,20 @@ function HeadsUp(props) {
 	const [timer, setTimer] = useState(0);
 	const [showHud, setShowHud] = useState(false)
 	const [voiceStatus, setVoiceStatus] = useState("VoiceStatus")
+
+	// `z` to show the UI
+	// `x` to hide the UI
+	function downHandler({ key }) {
+		if (key === 'z') { showHudCommand() }
+		else if (key === 'xxxxz') { hideHudCommand() }
+	}
+
+	useEffect(() => {
+		window.addEventListener('keydown', downHandler);
+		return () => {
+			window.removeEventListener('keydown', downHandler);
+		};
+	}, []);
 
 	function weather(hotSpotDiv, args) {
 		ReactDOM.render(<Weather data={args[0]} />, hotSpotDiv);
@@ -72,11 +86,11 @@ function HeadsUp(props) {
 		setVoiceStatus(status)
 	}
 
-  const resultCallback = (userSaid, commandText, phrases) => {
-    console.log("USER SAID" + userSaid);
-    console.log(" COMMAND TEXT " + commandText);
-    console.log("PHASES " + phrases);
-  }
+	const resultCallback = (userSaid, commandText, phrases) => {
+		console.log("USER SAID" + userSaid);
+		console.log(" COMMAND TEXT " + commandText);
+		console.log("PHASES " + phrases);
+	}
 
 	const renderPannellum = () => {
 
@@ -141,46 +155,46 @@ function HeadsUp(props) {
 						{/*  yaw={-74}*/}
 						{/*  tooltip={leftPanel}*/}
 						{/*/>*/}
-            <Pannellum.Hotspot
-              type='custom'
-              cssClass='weather'
-              pitch={4}
-              yaw={42}
-              tooltip={weather}
-              tooltipArg={[data]}
-            />
-            <Pannellum.Hotspot
-              type='custom'
-              cssClass='flightSpeed'
-              pitch={-4}
-              yaw={39}
-              tooltip={flightSpeed}
-              tooltipArg={[data]}
-            />
-            <Pannellum.Hotspot
-              type='custom'
-              cssClass='fuelLevel'
-              pitch={-5}
-              yaw={-42}
-              tooltip={fuelLevel}
-              tooltipArg={[data]}
-            />
-            <Pannellum.Hotspot
-              type='custom'
-              cssClass='rightPanel'
-              pitch={-3}
-              yaw={77}
-              tooltip={rightPanel}
-              tooltipArg={[data]}
-            />
-            <Pannellum.Hotspot
-              type='custom'
-              cssClass='leftPanel'
-              pitch={-5}
-              yaw={-74}
-              tooltip={leftPanel}
-              tooltipArg={[data]}
-            />
+						<Pannellum.Hotspot
+							type='custom'
+							cssClass='weather'
+							pitch={4}
+							yaw={42}
+							tooltip={weather}
+							tooltipArg={[data]}
+						/>
+						<Pannellum.Hotspot
+							type='custom'
+							cssClass='flightSpeed'
+							pitch={-4}
+							yaw={39}
+							tooltip={flightSpeed}
+							tooltipArg={[data]}
+						/>
+						<Pannellum.Hotspot
+							type='custom'
+							cssClass='fuelLevel'
+							pitch={-5}
+							yaw={-42}
+							tooltip={fuelLevel}
+							tooltipArg={[data]}
+						/>
+						<Pannellum.Hotspot
+							type='custom'
+							cssClass='rightPanel'
+							pitch={-3}
+							yaw={77}
+							tooltip={rightPanel}
+							tooltipArg={[data]}
+						/>
+						<Pannellum.Hotspot
+							type='custom'
+							cssClass='leftPanel'
+							pitch={-5}
+							yaw={-74}
+							tooltip={leftPanel}
+							tooltipArg={[data]}
+						/>
 
 
 					</Pannellum>
