@@ -21,21 +21,7 @@ function HeadsUp(props) {
 	const [showHud, setShowHud] = useState(false)
 	const [voiceStatus, setVoiceStatus] = useState("VoiceStatus")
 
-  useEffect(() => {
-    let interval = null;
-    interval = setInterval(() => {
-      setTimer(timer => timer + 1);
-    }, 1000);
-    console.log("Timer = " + timer);
-    return () => clearInterval(interval);
-  }, [timer]);
-
 	function weather(hotSpotDiv, args) {
-		ReactDOM.render(
-			<div className='weather headsupdisplay'>
-				<p>Weather in 20 miles:</p>
-				<p className='weatherIcons'>  {data[timer]["FUTURE WEATHER (MET OFFICE API)"]}</p></div>
-			, hotSpotDiv);
 		ReactDOM.render(<Weather data={args[0]} />, hotSpotDiv);
 	}
 
