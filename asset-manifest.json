@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/heads-up-display/static/css/main.4ba4f923.chunk.css",
+    "main.js": "/heads-up-display/static/js/main.0ef888f7.chunk.js",
+    "main.js.map": "/heads-up-display/static/js/main.0ef888f7.chunk.js.map",
+    "runtime-main.js": "/heads-up-display/static/js/runtime-main.fa52908f.js",
+    "runtime-main.js.map": "/heads-up-display/static/js/runtime-main.fa52908f.js.map",
+    "static/css/2.9f564537.chunk.css": "/heads-up-display/static/css/2.9f564537.chunk.css",
+    "static/js/2.572e841b.chunk.js": "/heads-up-display/static/js/2.572e841b.chunk.js",
+    "static/js/2.572e841b.chunk.js.map": "/heads-up-display/static/js/2.572e841b.chunk.js.map",
+    "index.html": "/heads-up-display/index.html",
+    "precache-manifest.680a5fc55eb6c520ca4776ac948c3b5d.js": "/heads-up-display/precache-manifest.680a5fc55eb6c520ca4776ac948c3b5d.js",
+    "service-worker.js": "/heads-up-display/service-worker.js",
+    "static/css/2.9f564537.chunk.css.map": "/heads-up-display/static/css/2.9f564537.chunk.css.map",
+    "static/css/main.4ba4f923.chunk.css.map": "/heads-up-display/static/css/main.4ba4f923.chunk.css.map",
+    "static/media/CockpitWithSky.jpg": "/heads-up-display/static/media/CockpitWithSky.24569109.jpg",
+    "static/media/CockpitWithSkyAndFlightPath.jpg": "/heads-up-display/static/media/CockpitWithSkyAndFlightPath.b4e92850.jpg",
+    "static/media/pannellum.css": "/heads-up-display/static/media/sprites.f37aa8ca.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fa52908f.js",
+    "static/css/2.9f564537.chunk.css",
+    "static/js/2.572e841b.chunk.js",
+    "static/css/main.4ba4f923.chunk.css",
+    "static/js/main.0ef888f7.chunk.js"
+  ]
+}
