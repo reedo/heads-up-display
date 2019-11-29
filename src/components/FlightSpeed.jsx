@@ -40,10 +40,10 @@ function FlightSpeed(props) {
 
 
 	return (
-		<div>
-		<p className='flightSpeed headsupdisplay'>Total Flight Duration: 09:45:00</p>
-		<p className='flightSpeed headsupdisplay'>Remaining Time: {formattedTimer}</p>
-		<p className='flightSpeed headsupdisplay'>Recommended rest point: {napTimer}</p></div>
+		<div className='flightSpeed headsupdisplay'>
+		<p>Total Flight Duration: 09:45:00</p>
+		<p>Remaining Time: {formattedTimer}</p>
+		<p>Recommended rest point: {napTimer}</p></div>
 		// <p className='flightSpeed headsupdisplay'>Flight Speed: {data[timer]["SPEED (KNTs)"]} km/h</p>
 	);
 }

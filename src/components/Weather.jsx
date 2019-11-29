@@ -19,7 +19,7 @@ function Weather(props) {
 
 	return (
 		<div className='weather headsupdisplay'>
-			<p>Weather in 20 miles:</p>
+			<p>Weather in 70 miles:</p>
 			<p className='weatherIcons'>  {data[timer]["FUTURE WEATHER (MET OFFICE API)"]}</p></div>
 	);
 }
