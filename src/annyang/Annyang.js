@@ -23,12 +23,13 @@ class Annyang {
     }
   }
 
-  addCommands(showHud, hideHud, undo) {
+  addCommands(showHud, hideHud, createReport, augmentedReality) {
     if (annyang) {
       annyang.addCommands({
         'show': () => showHud(),
         'hide': () => hideHud(),
-        'undo': () => undo()
+        'create report': () => createReport(),
+        'augmented Reality': ()=>augmentedReality()
       })
     }
   }
