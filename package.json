@@ -2,7 +2,7 @@
 	"name": "heads-up-display",
 	"version": "0.1.0",
 	"private": true,
-	"homepage": "http://reedo.github.io/heads-up-display",
+	"homepage": "https://reedo.github.io/heads-up-display",
 	"dependencies": {
 		"annyang": "^2.6.1",
 		"csv-parse": "^4.8.2",
