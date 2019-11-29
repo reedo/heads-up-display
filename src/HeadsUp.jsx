@@ -25,7 +25,7 @@ function HeadsUp(props) {
 	// `x` to hide the UI
 	function downHandler({ key }) {
 		if (key === 'z') { showHudCommand() }
-		else if (key === 'xxxxz') { hideHudCommand() }
+		else if (key === 'x') { hideHudCommand() }
 	}
 
 	useEffect(() => {
