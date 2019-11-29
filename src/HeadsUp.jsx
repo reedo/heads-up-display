@@ -26,6 +26,7 @@ function HeadsUp(props) {
 	function downHandler({ key }) {
 		if (key === 'z') { showHudCommand() }
 		else if (key === 'x') { hideHudCommand() }
+		else if (key === 'r') { createReport() }
 	}
 
 	useEffect(() => {
