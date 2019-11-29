@@ -24,13 +24,13 @@
 .flightSpeed {
 	white-space: pre-wrap;
 }
+.fuelLeft {
+	width:50px;
+	font-size:32px;
+}
 .fuelLevel {
-	color:orange
+	display:flex;
 }
 .rightPanel {
-	color:orange;
 	width: 400px;
-}
-.leftPanel {
-	color:orange
 }

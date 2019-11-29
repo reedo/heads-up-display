@@ -19,8 +19,10 @@ function FuelLevel(props) {
 
 	return (
 		<div className="fuelLevel headsupdisplay">
+			<div className = 'fuelLeft'>⛽</div>
+			<div className = 'fuelRight'>
 			<p>Fuel Level: {data[timer]["FUEL LEVEL (%)"]}%</p>
-			<p>Fuel Burn: 10 kg/min</p>
+			<p>Fuel Burn: 10 kg/min</p></div>
 		</div>
 	);
 }
