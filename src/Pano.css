@@ -10,6 +10,7 @@
 	color: greenyellow;
 	background: rgba(77, 57, 74, 0.5);
 	padding: 5px;
+	text-shadow: 0px 0px 3px #000;
 }
 .horizonLine {
 	size:456px
